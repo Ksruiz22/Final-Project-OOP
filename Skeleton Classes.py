@@ -1,70 +1,127 @@
+"""Declaración de clase"""
+
 
 class RecipeDisplay(Comparator):
+    """No declaramos ningún atributo aquí porque esta clase hace referencia a la interfaz gráfica del proyecto"""
+
     def __init__(self):
         pass
+    """Declaración de los métodos de la clase"""
     def printFilter(filter):
         pass
-    def updateRecipe(Recipe)-> None:
+    """Estos métodos se encargan de procesos que no regresan ningún valor, de ahí el uso del None"""
+    def updateRecipe(Recipe) -> None:
         pass
-    def changeIngredients(int)-> None:
+
+    def changeIngredients(int) -> None:
         pass
-    def setVisible(boolean)-> None:
+
+    def setVisible(boolean) -> None:
         pass
-   
+
+
+"""Declaración de clase"""
+
+
 class Comparator:
+    """Constructor de la clase"""
+
     def __init__(self):
         cookBook: CookBook
         ingredient: Ingredient
+    """Declaración de los métodos de la clase"""
     def filter(cookBook, ingredient):
         pass
-         
+
+
+"""Declaración de clase"""
+
+
 class Ingredient:
-        def __init__(self):
-            name: str
-            amount: int
-            unit: str
+    """Constructor de la clase"""
+
+    def __init__(self):
+        name: str
+        amount: int
+        unit: str
+
+
+"""Declaración de clase"""
+
 
 class User(Ingredient):
+    """Constructor de la clase"""
+
     def __init__(self):
         ingred: list[Ingredient]
         amount: list[int]
         unit: list[str]
+    """Declaración de los métodos de la clase"""
     def getingredient(ingred):
         pass
+
     def getAmount(amount):
         pass
+
     def getUnit(unit):
         pass
-    
+
+
+"""Declaración de clase"""
+
 
 class CookBook:
+    """Constructor de la clase"""
+
     def _init_(self):
         path: str
         recipes: list[str]
         currentRecipe: int
         currentView: str
         recDisplay: RecipeDisplay
-    def nextRecipe()-> None:
+    """Declaración de los métodos de la clase"""
+    def getPath():
         pass
+
+    def openFile(path):
+        pass
+    """Estos métodos se encargan de procesos que no regresan ningún valor, de ahí el uso del None"""
+    def nextRecipe() -> None:
+        pass
+
+    def previousRecipe() -> None:
+        pass
+
+    def switchView() -> None:
+        pass
+
+    def main(str) -> None:
+        pass
+
+
+"""Declaración de clase"""
+
 
 class RecipeReader:
-    def __init__(self, cedula:int, name:str, lastname:str, plan:int, telephone:int, paydate:str, cardnumber:str, expdate:str, cod:int):
+    """Constructor de la clase"""
+
+    def __init__(self):
+        dataPath: str
+    """Declaración del método de la clase"""
+    def readRecipe(Recipe):
         pass
-        def carmod():
-            pass
-        def modcard():
-            pass
-        def modnum():
-            pass
+
+
+"""Declaración de clase"""
+
 
 class Recipe:
-    def _init_(self, name:str, lastname:str, telephone:int, salary:float):
-        pass
-    def addclient():
-        pass
-    def removeclient(): 
-        pass
-    def modclient():
-        pass
-    def modnum():
-        pass
+    """Constructor de la clase"""
+
+    def _init_(self):
+        title: str
+        description: str
+        ingredients: list[Ingredient]
+        """BufferedImage no está declarada porque es una idea que aún no implementamos del todo"""
+        image: BufferedImage
+        miniatura: BufferedImage
