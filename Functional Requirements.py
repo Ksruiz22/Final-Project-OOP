@@ -1,4 +1,4 @@
-"""1ER REQUERIMIENTO"""
+"""1ER REQUERIMIENTO - INTRODUCCIÓN DE INPUTS POR PARTE DEL USUARIO"""
 
 """Definimos la clase ingredientes"""
 
@@ -55,7 +55,7 @@ while seguir == 1:
 print("\n", k.ingred, "\n", k.amount, "\n", k.unit)
 
 
-""""2NDO REQUERIMIENTO""""
+""""2NDO REQUERIMIENTO - LECTURA DEL COOKBOOK""""
 
 """Importamos la librería json para abrir el archivo .json"""
 import json
