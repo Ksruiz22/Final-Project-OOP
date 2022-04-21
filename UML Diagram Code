@@ -1,7 +1,6 @@
 @startuml UML Diagram
 Class RecipeDisplay{
-        -
-        +printFilter(Filter(CookBook, Ingrediente))
+    +printFilter(Filter(CookBook, Ingrediente))
     -imageLabel : JLabel
     -recipeDescription : JFormattedTextField
     -peopleNumber : JFormattedTextField
@@ -70,6 +69,5 @@ Ingrediente "1..*" <|-- "1" User
 Comparator "1" *-- "1" Book
 Comparator "1" *-- "1..*" Ingrediente
 RecipeDisplay "1..*" *---|>"1..*" Comparator
-
 
 @enduml
