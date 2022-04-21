@@ -1,0 +1,75 @@
+@startuml UML Diagram
+Class RecipeDisplay{
+        -
+        +printFilter(Filter(CookBook, Ingrediente))
+    -imageLabel : JLabel
+    -recipeDescription : JFormattedTextField
+    -peopleNumber : JFormattedTextField
+    -multiplyField : JFormattedTextField
+    -plusButton :JButton
+    -minusButton: JButton
+    -ingredientsField : ArrayList<FormattedTextField>
+    -browsingPosition: JFormattedTextField
+    -homeButton : JButton
+    -backButton: JButton
+    -nextButton : JButton
+    +updateRecipe(Recipe): void
+    +changeIngredients(int): void
+    +setVisible(boolean): void
+}
+
+Class Ingrediente{
+    -name : String 
+    -amount : int 
+    -unit: String
+}
+Class "CookBook" as Book {
+    -path: Str
+    -Recipes : ArrayList <String> 
+    -CurrentRecipe: Integer 
+    -currentView : String 
+    -recDisplay : RecipeDisplay
+    +nextRecipe(): void 
+    +previousRecipe(): void 
+    +switchView(String) : void
+    +main(String) : void
+    +getPath() 
+    +openFile(path)
+
+}
+package Recipe{
+Class Recipe{
+    -title : String
+    - description: String
+    -ingredients : ArrayList<Ingredient>
+    -image : BufferedImage
+    -miniatura : BufferedImage
+}
+Class RecipeReader{
+    -dataPath : String
+    +readRecipe(ArrayList<Recipe>)
+}
+}
+
+Class Comparator{
+    -cookBook : CookBook
+    -ingredient : Ingrediente
+    -recipe : Recipe
+    +Filter(CookBook, Ingrediente)
+}
+Class User{
+    -Ingred: ArrayList<Ingrediente>
+    -Amount: Array<int>
+    -Unit: Array<Str>
+    +getIngrediente(Ingred)
+    +getAmount(Amount)
+    +getUnit(Unit)
+
+}
+Ingrediente "1..*" <|-- "1" User
+Comparator "1" *-- "1" Book
+Comparator "1" *-- "1..*" Ingrediente
+RecipeDisplay "1..*" *---|>"1..*" Comparator
+
+
+@enduml
