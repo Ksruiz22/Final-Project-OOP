@@ -1,3 +1,4 @@
+"""1ER REQUERIMIENTO"""
 """Definimos la clase ingredientes"""
 
 
@@ -51,3 +52,51 @@ while seguir == 1:
         seguir = int(seguir)
 """Imprimimos las listas"""
 print("\n", k.ingred, "\n", k.amount, "\n", k.unit)
+
+
+""""2NDO REQUERIMIENTO""""
+
+"""Importamos la librería json para abrir el archivo .json"""
+import json
+
+
+class CookBook:
+    """Constructor de la clase"""
+
+    def _init_(self):
+        path: str
+        recipes: list[str]
+        currentRecipe: int
+        currentView: str
+    """Declaración de los métodos de la clase"""
+    def getPath():
+        pass
+        """Implementación de un requerimiento funcional, abrir el archivo .json con las recetas y almacenarlas en una lista"""
+    def openFile():
+        """Abrimos el archivo"""
+        with open("recipes.json") as recipes:
+            """Metemos la infomación del archivo en una variable"""
+            data = json.load(recipes)
+            """Agregamos la info a una lista"""
+            recipes = [data]
+            """Imprimimos la lista para mostrar su funcionalidad"""
+            print(recipes)
+    """Estos métodos se encargan de procesos que no regresan ningún valor, de ahí el uso del None"""
+    def nextRecipe() -> None:
+        pass
+
+    def previousRecipe() -> None:
+        pass
+
+    def switchView() -> None:
+        pass
+
+    def main(str) -> None:
+        pass
+
+
+"""Instanciación de un objeto de la clase CookBook, la cual será nuestra base de datos para desarrollar el proyecto"""
+a = CookBook
+"""Usamos el método openFile de la clase para llevar a cabo todos los procedimientos"""
+a.openFile()
+
